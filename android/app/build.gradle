@@ -102,14 +102,20 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    defaultConfig {
-        applicationId "com.dribia.decodeapp"
-        missingDimensionStrategy 'react-native-camera', 'general'
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 58
-        versionName "2.0.2"
+   defaultConfig {
+        applicationId "com.example.zencode"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+        }
     }
+    
     splits {
         abi {
             reset()
